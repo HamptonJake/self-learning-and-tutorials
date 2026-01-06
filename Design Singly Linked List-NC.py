@@ -1,7 +1,7 @@
 class LinkedListNode:
-    def __init__(self, value, NextNode = None):
+    def __init__(self, value, nextNode = None):
         self.value = value
-        self.nextNode = NextNode
+        self.nextNode = nextNode
 
 
 class LinkedList:
@@ -12,31 +12,37 @@ class LinkedList:
 
     
     def get(self, index: int) -> int:
-        currentNode = self.head
-        nodectr = 0
+        if self.head is not None:
 
-        while currentNode.next is not None:
-            if nodectr == index:
-                return currentNode.value
-            currentNode = currentNode.NextNode
-            if nodectr == index:
-                return currentNode.value
+            currentNode = self.head
+            nodectr = 0
+
+            while currentNode is not None:
+                if nodectr == index:
+                    return currentNode.value
+                nodectr += 1
+                currentNode = currentNode.nextNode
         return -1
 
 
     def insertHead(self, val: int) -> None:
         node = LinkedListNode(val)
         node.nextNode = self.head
+        self.head = node
 
     def insertTail(self, val: int) -> None:
         node = LinkedListNode(val)
 
-        if self.head is not None:
+        if self.head is None:
+            self.head = node
+        else:
             currentNode = self.head
-
             while currentNode.nextNode is not None:
                 currentNode = currentNode.nextNode
             currentNode.nextNode = node
+        
+
+        
 
 
     def remove(self, index: int) -> bool:
@@ -64,10 +70,21 @@ class LinkedList:
 
     def getValues(self) -> List[int]:
         lll = []
-
         currentNode = self.head
+
         while currentNode is not None:
-            print(currentNode.val)
-            lll += [currentNode.val]
-            currentNode = currentNode.next
+            lll += [currentNode.value]
+            currentNode = currentNode.nextNode
         return lll
+
+
+
+linky = LinkedList()
+linky.insertTail(1)
+linky.insertTail(2)
+
+
+print("Getting")
+print(linky.head.value)
+print(linky.get(1))
+
