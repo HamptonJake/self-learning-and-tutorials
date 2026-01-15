@@ -1,0 +1,26 @@
+def mostActive(customers):
+    numCust = len(customers)
+    
+    activeDict = {}
+    
+    for i in range(numCust):
+        if customers[i] in activeDict:
+            activeDict[customers[i]] += 1
+        else:
+            activeDict[customers[i]] = 1
+    
+    
+            
+    activeSort = sorted(activeDict, key = activeDict.get, reverse = True)
+    top3 = [activeSort[0], activeSort[1], activeSort[2]]
+    return top3
+    
+    
+            
+
+customers = ["jake", "jake", "chia", "chia", "aaron", "oscar", "oscar", "aaron", "jake", "chia", "chia"]
+
+
+
+
+print(mostActive(customers))
