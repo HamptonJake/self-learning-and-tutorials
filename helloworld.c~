@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+
+
+
+
+int main(void){
+
+  int i; //signed integers
+  float f; //signed floating point
+  char *s = "Hello, world"; //char * ("char pointer") is the string type
+
+
+  i = 3;
+  f = 3.14;
+
+  printf("%s i=%d and f=%f", s, i, f);
+
+  printf("Hello World!\n");
+
+
+
+  printf("Testing boolean types\n");
+
+  int x = 1;
+
+  if (x){
+    printf("The varible: %d is non-zero", x);
+  }
+
+  int y = true;
+
+  if(y){
+    printf("brother, y is true");
+  }
+
+  
+
+  
+}
+
