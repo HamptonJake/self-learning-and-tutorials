@@ -8,6 +8,16 @@ void foo(void);
 
 
 
+
+// Empty parameter lists
+void specify_void(void){
+
+  printf("This function has no parameters\n");
+}
+
+
+
+
 int plus_one(int n){
   return n+1;
 }
@@ -36,7 +46,7 @@ int main(void){
 
   foo();
 
-  
+  specify_void();
 
 
   
@@ -47,3 +57,5 @@ int main(void){
 void foo(void){
   printf("This was declared after the main function\n");
 }
+
+
