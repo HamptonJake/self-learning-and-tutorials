@@ -1,0 +1,35 @@
+#include<stdio.h>
+
+
+
+
+// memory and variables
+
+
+
+
+
+void main(){
+
+
+  // Determine how many bytes of memory a certain type uses
+
+  printf("An int uses %zu bytes of memory\n", sizeof(int));
+  printf("A double uses %zu bytes of memory\n", sizeof(float));
+
+
+  int x = 10;
+  int y = 100;
+
+  float a = 1.2;
+  float b = 25.1;
+  
+  printf("An int expression uses %zu\n", sizeof(y-x));
+  printf("A float expression uses %zu\n", sizeof(b-a));
+
+
+
+
+
+  
+}
