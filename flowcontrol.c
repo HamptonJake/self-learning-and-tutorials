@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 #include<time.h>
 
 int main(){
@@ -56,6 +57,60 @@ int main(){
   }
   
   
+  // Some for loops
+  int therando;
+
+  // Rand is a pseudorandom number generator
+
+  do{
+    therando = rand()%101;
+    printf("Randomly generated: %d\n", therando);
+  }while(therando != 13);
+
+
+  int j = 0;
+  while(j<10){
+    printf("j = %d\n", j);
+    j++;
+  }
+
+
+  for(j=0; j<10; j++){
+    printf("j = %d\n", j);
+  }
+
+  /*
+  //An empty for will run forever
+  for(;;){
+    printf("unstoppable force\n");
+  }
+  */
+
+  // Switch it up
+
+  int option = 2;
+
+
+  switch(option){
+
+  case 0:
+    printf("You chose option 0.\nThank you");
+    break;
+  case 1:
+    printf("You chose option 1.\nThank you");
+    break;
+  case 2:
+    printf("you chose option 2.\nThank you");
+    break;
+  default:
+    printf("I'm sorry I can't help you there.\nPlease select a valid option");
+    break;
+  }
+
+
+
+
+
   
 
 }
