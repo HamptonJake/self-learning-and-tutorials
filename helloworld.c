@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h> //this is required for my version of c (what even is my version?)
+#include <time.h> //for random
 
 
 
@@ -70,8 +71,35 @@ int main(void){
   }
 
 
-
+  // this is required for the random function to generate different numbers each time this program is run
+  srand(time(NULL));
   
+  // Conditional operators
+  int num1 = rand()%30;
+  int num2 = rand()%30;
+
+
+  if(num1 < num2){
+    printf("%d is less than %d\n", num1, num2);
+  }else{
+      printf("%d is greater than %d\n", num1, num2);
+    }
+
+
+
+
+  printf("*******Size of operator*******\n");
+  printf("This is only for the size of the type of expression, not the size of the actual expression");
+  int abra = 12029132;
+  // zu is the format for type size_t
+  printf("This is the size of the varibale %zu\n", sizeof(abra));
+  printf("Size of the expression (89.5/25.2) = %zu\n", sizeof(89.5/25.2));
+
+
+  printf("%zu\n", sizeof(int));
+  printf("%zu\n", sizeof(char));
+
+
   
   
 }
