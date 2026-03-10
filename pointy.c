@@ -2,6 +2,15 @@
 
 
 
+// An example of passing pointers as arguments
+void increment(int *p){
+  *p = *p + 1;
+
+}
+
+
+
+
 
 // memory and variables
 
@@ -49,6 +58,56 @@ void main(){
   int i = 10;
   printf("The value of i is %d\n", i);
   printf("The address of i is %p\n", (void*)&i);
+
+  // pointer variable holds the address
+
+
+
+
+
+
+  // Testing the increment funtion
+  int eye = 10;
+  int *pie = &eye;
+
+
+  printf("This is the value of i: %d\n", eye);
+  printf("This is the value of a derefernced i: %d\n", *pie);
+
+
+  increment(pie);
+
+  printf("This is the value of i: %d\n", eye);
+  
+
+
+
+  // The null pointer
+
+  int *j;
+
+  j = NULL;
+
+  // DO NOT REFERENCE A NULL POINTER
+  // *j = 12;
+
+
+  int abc;
+  int *p;
+
+  // Same as int abc, *p;
+
+
+
+  // sizeof and Pointers
+  // sizeof is for size of type of expression not for variables in the expression
+  int *gf;
+
+  printf("%zu\n", sizeof(int));
+  printf("%zu\n", sizeof(gf));
+  printf("%zu\n", sizeof(*gf));
+
+  
 
 
   
