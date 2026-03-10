@@ -1,0 +1,66 @@
+
+#include<stdio.h>
+
+
+
+void foo(int x[12]){
+  printf("%zu\n", sizeof(x));
+
+
+}
+
+
+
+
+
+
+int main(void){
+
+  int i;
+  float f[8];
+
+
+  f[0] = 1.1;
+  f[1] = 1.2;
+  f[2] = 1.3;
+  f[3] = 1.4;
+  f[4] = 1.5;
+  f[5] = 1.6;
+  f[6] = 1.7;
+  f[7] = 1.8;
+
+  for(int j=0;j<7;j++){
+    printf("The value at index: %d = %f\n", j, f[j]);
+
+  }
+
+
+
+
+  // some math to get the size of the arrays
+  int x[12];
+
+  printf("%zu\n", sizeof(x));
+  printf("%zu\n", sizeof(int));
+
+  printf("%zu\n", sizeof(x)/sizeof(int));
+
+  printf("A char size is: %zu\n", sizeof(char));
+
+  foo(x);
+
+
+  // when you pass arrays to functions you are only passing a pointer to the first indice, and that is what the sizeof function returns
+
+
+  
+
+
+
+
+
+
+
+
+
+}
