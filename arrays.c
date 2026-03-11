@@ -48,10 +48,22 @@ int main(void){
   printf("A char size is: %zu\n", sizeof(char));
 
   foo(x);
-
-
   // when you pass arrays to functions you are only passing a pointer to the first indice, and that is what the sizeof function returns
 
+
+
+
+  printf("This is the size of a double array with 48 elements: %ld\n", sizeof(double [48]));
+
+
+
+  // initializing arrays
+
+  int abrak;
+  int initialized_arr[4] = {22, 34, 64, 23};
+
+  
+  
 
   
 
